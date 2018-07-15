@@ -1,5 +1,3 @@
-# Ch 02
-
 ## ES6 Syntax
 - const
 常量不可以被修改
@@ -54,4 +52,49 @@ var nameFunc = function(name){
 }
 //arrow function
 var nameFunc = (name) => 'My name is ${name}'
+```
+- 解构赋值 将**值从数组**或**属性从对象**提取到不同的变量中
+```Javascript
+//Object attribute
+const user = {name:'Amy', age, 20}
+const {name, age} = user
+console.log('${name}: ${age}') //Amy, 20
+//Array value
+const arr = [1,2]
+const [foo, bar] = arr
+console.log(foo) //1
+```
+
+- 对象语义增强 解构的反向操作 将值作为属性赋予对象
+```Javascript
+const name = 'Amy'
+const age = 20
+const user = {name, age}
+//function 关键字的省略
+const user = {
+    name,
+    age,
+    eat(food){
+      console.log('yummy',food)
+    }
+}
+```
+
+- 扩展运算符 ... Spread Operator 用于组装数组 获取部分数组
+```Javascript
+//组装数组
+const arr = ['Apple', 'Orange']
+[...arr, 'Banana'] //['Apple', 'Orange', 'Banana']
+//获取部分数组
+const arr = [1,2,3,4]
+const [first, ...rest] = arr //rest:[2,3,4]
+const [a, b, ...c] = arr //c:[3,4]
+```
+
+- 模块导入导出
+```Javascript
+import dva from 'dva'//引入全部
+import {connect} from 'dva'//引入部分
+export default App//导出默认
+export class App extend Component {}//部分导出
 ```
