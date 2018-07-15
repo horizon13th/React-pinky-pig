@@ -90,7 +90,20 @@ const arr = [1,2,3,4]
 const [first, ...rest] = arr //rest:[2,3,4]
 const [a, b, ...c] = arr //c:[3,4]
 ```
-
+```Javascript
+//Before
+const attrs = {
+  href: 'http://example.org',
+  target: '_blank',
+};
+<a href={attrs.href} target={attrs.target}>Hello</a>
+//dva
+const attrs = {
+  href: 'http://example.org',
+  target: '_blank',
+};
+<a {...attrs}>Hello</a>
+```
 - 模块导入导出
 ```Javascript
 import dva from 'dva'//引入全部
