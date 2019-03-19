@@ -1,7 +1,3 @@
-### Content
-
-## React
-
 ## ES6 Syntax
 - const
 常量不可以被修改
@@ -115,12 +111,3 @@ import {connect} from 'dva'//引入部分
 export default App//导出默认
 export class App extend Component {}//部分导出
 ```
-
-## JS Basic
-- prototype 原型 原型链
-```Javascript
-
-```
-- closure 闭包
-- bind 的实现
-- call/apply 的实现
